@@ -107,12 +107,13 @@ if (window.VIDEOJS_NO_DYNAMIC_STYLE !== true) {
     style = stylesheet.createStyleElement('vjs-styles-defaults');
     let head = Dom.$('head');
     head.insertBefore(style, head.firstChild);
+    /* removed from setTextContent
+     // .video-js {
+     //   width: 300px;
+     //   height: 150px;
+     // }
+     */
     stylesheet.setTextContent(style, `
-      .video-js {
-        width: 300px;
-        height: 150px;
-      }
-
       .vjs-fluid {
         padding-top: 56.25%
       }
